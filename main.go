@@ -16,5 +16,13 @@ func main() {
 		})
 	})
 
+	r.GET("/hello/:name", func(c *gin.Context) {
+		name := c.Param("name")
+
+		c.JSON(200, gin.H{
+			"message": "Hello " + name,
+		})
+	})
+
 	r.Run() // listen and serve on 0.0.0.0:8080
 }

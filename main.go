@@ -24,5 +24,8 @@ func main() {
 		})
 	})
 
+	// Serve static files from the current directory
+	r.StaticFile("/loaderio-8c36ed10c019f659e3e41ad1b3878dd9.txt", "./loaderio-8c36ed10c019f659e3e41ad1b3878dd9.txt")
+
 	r.Run() // listen and serve on 0.0.0.0:8080
 }

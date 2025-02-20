@@ -25,6 +25,9 @@ WORKDIR /root/
 # Copy the Pre-built binary file from the previous stage
 COPY --from=builder /app/main .
 
+# Copy the loaderio file into the container
+COPY loaderio-8c36ed10c019f659e3e41ad1b3878dd9.txt .
+
 # Expose port 8080 to the outside world
 EXPOSE 8080
 
